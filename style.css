@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+
+:root {
+    --primary-color: #30336b;
+    --secondary-color: #373b69;
+}
+html{font-size: 62.5%;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #0d0e11;
+}
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: .5rem  1rem;
+    color: #fff;
+}
+.search::placeholder {
+    color: #7378c5;
+}
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+}
+
+.movie {
+    width: 35rem;
+    margin: 2rem;
+    color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    position: relative;
+    font-family: inherit;
+}
+.movie img {
+    width: 100%;
+}
+.movie-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    font-size: 1.5rem;
+    color: black;
+    background-color: #fff;
+    max-height: 100%;
+    overflow: hidden!important;
+    font-weight: bold;
+}
+.movie-title span {
+    background-color: #2d3436;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: .5rem;
+}
+
+.movie-title span.orange {
+    color: orange;
+}
+.movie-title span.green {
+    color: lightgreen;
+}
+.movie-title span.red {
+    color: red;
+}
+
+.overview {
+    background-color: #2C3A47;
+    padding: 3rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+    font-size: 1.5rem;
+}
+.overview h3 {
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+
+@media screen and (max-width: 500px) {
+    html{font-size: 50%;}
+}
+@media screen and (max-width: 400px) {
+    html{font-size: 45%;}
+}
+@media screen and (max-width: 350px) {
+    html{font-size: 40%;}
+}
+@media screen and (max-width: 316px) {
+    html{font-size: 35%;}
+}
